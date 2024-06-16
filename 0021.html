@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <style type="text/css">
+        :root {
+            --font-family: 'Palatino, serif';
+            --background-gradient: linear-gradient(to bottom, #b8f2f1, #ffffff);
+            --container-max-width: 1200px;
+            --padding: 20px;
+            --text-color: #333;
+            --primary-color: #0fffef;
+            --secondary-color: #ffffff;
+            --button-bg-color: #0fffef;
+            --button-hover-bg-color: #ffffff;
+            --button-text-color: #000000;
+            --button-hover-text-color: #0fffef;
+            --footer-bg-color: #b8f2f1;
+            --footer-text-color: #000000;
+            --description-font-size: 18px; /* Font size for product description */
+            --features-font-size: 18px; /* Font size for features */
+            --care-instructions-font-size: 18px; /* Font size for care instructions */
+            --policy-font-size: 16px; /* Font size for policy sections */
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--background-gradient);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: var(--padding);
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 36px; /* Increased font size for title */
+            margin-bottom: 20px; /* Added margin bottom for spacing */
+        }
+
+        .title-big {
+            font-weight: bold;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .title-small {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .title-divider {
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .description, .policy-section {
+            padding: var(--padding);
+            background: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Added margin bottom for spacing */
+        }
+
+        .description {
+            font-size: var(--description-font-size);
+        }
+
+        .features, .care-instructions, .policy-section {
+            font-size: var(--features-font-size);
+        }
+
+        .footer {
+            background: var(--footer-bg-color);
+            padding: var(--padding);
+            text-align: center;
+            color: var(--footer-text-color);
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        .footer .footer-content {
+            margin-top: var(--padding);
+        }
+
+        .policy-buttons-container {
+            text-align: center;
+            margin: var(--padding) 0;
+        }
+
+        .policy-buttons-container button {
+            background: var(--button-bg-color);
+            border: none;
+            color: var(--button-text-color);
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .policy-buttons-container button:hover {
+            background: var(--button-hover-bg-color);
+            color: var(--button-hover-text-color);
+        }
+
+        .policy-section {
+            display: none;
+            font-size: var(--policy-font-size);
+        }
+
+        .policy-section.active {
+            display: block;
+        }
+
+        .policy-icon {
+            margin-right: 8px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .logos a,
+        .logos img {
+            margin: 0 5px; /* Adjusted margin */
+        }
+
+        .shipping-logo {
+            margin: 0 5px; /* Adjusted margin */
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin-top: 5px;
+        }
+
+        .alibaba-logo {
+            width: 30px;
+            margin-top: 5px;
+            margin-left: 5px; /* Adjusted margin */
+        }
+
+        /* Adjusted margin for social media icons */
+        .social-icons a {
+            margin: 0 8px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.policy-section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span class="title-big">High-Quality 100% Cotton T-shirts</span><br>
+            <span class="title-small">200-220 GSM</span>
+        </h1>
+        <div class="title-divider"></div>
+
+        <div class="description">
+            <p><strong style="color: var(--text-color); font-size: 28px;">Product Description:</strong></p>
+            <p>Discover our premium 100% Cotton T-shirts, made from the finest quality cotton and carefully crafted for comfort and durability. With a fabric weight of 200-220 GSM (grams per square meter), these T-shirts are soft, breathable, and perfect for everyday wear. Available in various sizes and colors to suit your style.</p>
+
+            <h2 style="color: var(--text-color);">Key Features:</h2>
+            <ul class="features">
+                <li>Material: 100% cotton</li>
+                <li>Fabric Weight: 200-220 GSM</li>
+                <li>Soft and Breathable</li>
+                <li>Durable and Comfortable for Everyday Wear</li>
+                <li>Classic Crew Neck Design</li>
+                <li>Available in Various Sizes and Colors</li>
+            </ul>
+
+            <h2 style="color: var(--text-color);">Quality Control:</h2>
+            <ul>
+                <li>Consistent Fabric Quality</li>
+                <li>Color Fastness</li>
+                <li>Stitching Precision</li>
+                <li>Seam Strength</li>
+                <li>Size Accuracy</li>
+                <li>Print and Design Integrity</li>
+            </ul>
+            <p>Our commitment to quality ensures you receive a product that meets your expectations.</p>
+
+            <h2 style="color: var(--text-color);">Additional Information:</h2>
+            <ul class="features">
+                <li>Perfect for Casual Wear, Events, and Promotions</li>
+                <li>Custom Printing and Branding Available</li>
+                <li>Great for Gifts and Giveaways</li>
+                <li>Order now and experience the comfort and quality of our premium T-shirts!</li>
+            </ul>
+            <p><img src="https://i.postimg.cc/QMXW36Ty/Screenshot-2024-06-16-145139.png" alt="T-shirt Image" style="max-width: 100%; margin-top: 10px;"></p>
+        </div>
+
+        <div class="policy-buttons-container">
+            <button onclick="showSection('shipping-policy')">SHIPPING POLICY</button>
+            <button onclick="showSection('payment-policy')">PAYMENT POLICY</button>
+            <button onclick="showSection('about-us')">ABOUT US</button>
+            <button onclick="showSection('contact-us')">CONTACT US</button>
+        </div>
+
+        <div class="policy-section" id="shipping-policy">
+            <h2><i class="fas fa-shipping-fast policy-icon"></i>Shipping Policy</h2>
+            <p>We offer various shipping options:</p>
+            <div class="logos">
+                <div class="shipping-logo"><i class="fab fa-dhl fa-3x"></i></div>
+                <div class="shipping-logo"><i class="fab fa-ups fa-3x"></i></div>
+                <div class="shipping-logo"><i class="fab fa-fedex fa-3x"></i></div>
+                <div class="shipping-logo"><i class="fab fa-usps fa-3x"></i></div>
+            </div>
+            <p><i class="fas fa-clock policy-icon"></i>Shipping times vary between 11-35 days depending on your location. If you want Fast shipping through DHL EXPRESS or UPS EXPRESS you can reach out to us through messages.</p>
+        </div>
+        <div class="policy-section" id="payment-policy">
+            <h2><i class="fas fa-credit-card policy-icon"></i>Payment Policy</h2>
+            <p><i class="fas fa-lock policy-icon"></i>Secure online payment options are available at checkout.</p>
+            <ul>
+                <li><i class="fab fa-paypal"></i> PayPal</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-visa"></i> Visa card</li>
+                <li><i class="fab fa-apple-pay"></i> Apple Pay</li>
+                <li><i class="fab fa-google-pay"></i> Google Pay</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-discover"></i> Discover</li>
+                <!-- Add more payment methods as needed -->
+            </ul>
+        </div>
+
+        <div class="policy-section" id="about-us">
+            <h2><i class="fas fa-info-circle policy-icon"></i>About Us</h2>
+            <p><strong>Welcome to our store</strong>, your trusted source for high-quality products and exceptional customer service. Located in Sialkot, we are committed to delivering premium T-shirts that meet and exceed your expectations.</p>
+
+            <h3>Our Mission</h3>
+            <p>At our store, our mission is to provide customers with comfortable and durable T-shirts crafted from the finest materials. We aim to offer excellent service and ensure customer satisfaction with every purchase.</p>
+
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Quality Assurance</strong>: We prioritize quality and ensure that every T-shirt meets stringent standards.</li>
+                <li><strong>Customer Satisfaction</strong>: Your satisfaction is our priority. We are dedicated to providing excellent customer service.</li>
+                <li><strong>Wide Range</strong>: We offer a variety of sizes, colors, and styles to suit your preferences.</li>
+                <li><strong>Global Shipping</strong>: We ship worldwide, ensuring everyone can enjoy our premium T-shirts.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section" id="contact-us">
+            <h2><i class="fas fa-envelope policy-icon"></i>Contact Us</h2>
+            <p>We can be contacted at any time via email if you have any questions, comments, or product requests. We will respond to you within 24 hours.</p>
+            <div class="logos">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:support@vasosports.com"><i class="fas fa-envelope"></i></a> <!-- Email icon -->
+                <a href="https://vasosports.trustpass.alibaba.com"><img src="https://i.postimg.cc/hvwY1nzZ/png-transparent-alibaba-logo-icon-removebg-preview.png" alt="Alibaba" class="alibaba-logo"></a> <!-- Alibaba logo with link -->
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <p><a href="#"><span style="color: var(--footer-text-color);">Muhammad Hassan Mumtaz</span></a></p>
+            <p style="color: var(--footer-text-color);">&copy; 2024 Muhammad Hassan Mumtaz. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:support@vasosports.com"><i class="fas fa-envelope"></i></a> <!-- Email icon -->
+                <a href="https://vasosports.trustpass.alibaba.com"><img src="https://i.postimg.cc/hvwY1nzZ/png-transparent-alibaba-logo-icon-removebg-preview.png" alt="Alibaba" class="alibaba-logo"></a> <!-- Alibaba logo with link -->
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
